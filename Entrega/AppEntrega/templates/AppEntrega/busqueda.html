@@ -1,0 +1,20 @@
+{% extends "index.html" %}
+{% load static %}
+
+
+{% block title %}Búsqueda{% endblock title %}
+
+{% block main %}
+    <form action="" method="POST" csrf_token>
+        <input type="text" name="query" placeholder="Introduce tu búsqueda">
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if query %}
+        <h2>Resultados de la búsqueda</h2>
+        {% for curso in cursos %}
+            <p>{{ curso.nombre }}</p>
+        {% endfor %}
+    {% endif %}
+
+{% endblock main %}

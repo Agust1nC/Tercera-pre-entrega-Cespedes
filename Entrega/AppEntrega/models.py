@@ -25,4 +25,5 @@ class PersonalNoDocente(models.Model):
     
     
 class Curso(models.Model):
-    nombre = models.CharField(max_length=25)    
+    nombre = models.CharField(max_length=25)  
+    camada = models.IntegerField()  

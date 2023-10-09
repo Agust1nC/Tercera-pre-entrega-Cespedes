@@ -8,5 +8,5 @@ urlpatterns = [
     path('personalnodocente/', views.pnodocente, name="PersonalNoDocente"),
     path('cursoform/', views.cursoFormulario, name="CursoForm"),
     path('apicursoform/', views.apiCursoFormulario, name="apiCursoForm"),
-    
+    path('busqueda/', views.busqueda, name="busqueda"),
 ]

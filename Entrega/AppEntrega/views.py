@@ -41,3 +41,17 @@ def apiCursoFormulario(request):
             miFormulario = CursoFormulario()
  
     return render(request, "AppEntrega/apiCursoFormulario.html", {"miFormulario": miFormulario})
+
+def busqueda(request):
+
+    if request.method == "POST":
+
+        miFormulario = CursoFormulario(request.POST)
+
+        if miFormulario.is_valid():
+            curso = miFormulario.save()
+            return render(request, "AppEntrega/index.html")
+    else:
+        miFormulario = CursoFormulario()
+
+    return render(request, "AppEntrega/busqueda.html", {"miFormulario": miFormulario})
